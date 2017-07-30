@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <link rel ="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Crystal Collector</title>
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="box">
+            <h1>Crystal Collector Game!</h1>
+            <p class="directions">
+              <h3><strong>Directions:</strong></h3><br>
+              You'll see a number, your starting score, and 4 crystals below. When clicked on, each crystal will add a random amount to your score.<br><br>
+              In order to win the game you need to get your <strong>score to equal the game score.</strong>
+              However, if your <strong>score exceeds the game score</strong>, you lose!<br><br>
+              After each round the number resets, and so does the value of each of the crystals!<br><br>
+              <h3><strong>Good Luck!</strong></h3><br><br>
+            </p>
+        </div>
+      </div>
+    </div> 
+
+    <div class ="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <img id="diamond" src="http://d13yyivlrtgsza.cloudfront.net/wp-content/uploads/2014/06/diamond-top-heavy.png">
+        </div>
+        <div class="col-lg-3">
+          <img id="ruby" src="https://visualstudiomagazine.com/blogs/onward-and-upward/2013/04/~/media/ECG/visualstudiomagazine/Images/introimages/VSMWardAzureRuby.ashx">
+        </div>
+        <div class="col-lg-3">
+          <img id="emerald" src="http://dreamicus.com/data/emerald/emerald-01.jpg">
+        </div>
+        <div class="col-lg-3">
+          <img id="sapphire" src="http://www.mardonjewelers.com/blog/wp-content/uploads/2012/09/vivid-blue1.jpg">
+        </div>
+      </div>  
+    </div>
+    
+    <div class="container">
+        <div class="col-lg-6">
+          <div class="row">
+            <h1 id="player-score"></h1>
+          </div>
+            <h1 id="game-score"></h1>
+        </div>
+        <div class="col-lg-6">
+            <h1 id="wins"></h1>
+            <h1 id="losses"></h1>
+        </div>  
+    </div>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="game.js">
+
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,49 @@
+### Option One: CrystalsCollector Game (Recommended)
+
+![Crystal Collector](Images/1-CrystalCollector.jpg)
+
+1. [Watch the demo](homework_demos/crystalsCollector_demo.mp4).
+
+2. The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of letters. 
+
+3. Here's how the app works:
+
+   * There will be four crystals displayed as buttons on the page.
+-Each crystal be an image, with a click event function 
+(reference sandwich clicker)
+-Each crystal should have a random hidden value between 1 - 12. Math.floor(Math.random() *12 +1);
+
+   * The player will be shown a random number between 19 - 120 at the start of the game.
+-create an array using a for loop with numbers 19-120 in it, then pick a random number in that array to be displayed 
+
+   * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+-use Math.floor(Math.random()*12+1); to generate a random number between 1-12, and set it equal to each crystal. 
+
+     * Your game will hide this amount until the player clicks a crystal.
+     * When they do click one, update the player's score counter.
+-use the random value stored in the crystal, add it to player's score (playerScore=playerScore+crystalScore)
+
+   * The player wins if their total score matches the random number from the beginning of the game.
+-create a conditional(if statement) that checks if the user's score is equal to the random number generated in the beginning of the game
+-add to win counter if it is, and reset the game.
+
+   * The player loses if their score goes above the random number.
+-create a conditional (if else) that checks if the user's score goes above the random number generated in the beginning of the game
+-adds to loss counter if it is, and reset the game
+
+   * The game restarts whenever the player wins or loses.
+-use a reset() function that starts the function over again, or reset the game via the win and loss conditionals
+
+     * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+-since the beginning number and crystal values are randomly generated, every time the game function is reset, these should change as well.
+
+   * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+-display win and loss counter just like in Psychic Game
+
+
+
+
+
+
+
+
