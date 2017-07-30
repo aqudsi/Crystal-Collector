@@ -45,34 +45,19 @@ function reset()
 	sapphire = 0;
 	playerScore = 0;
 }
-//updates text
+//updates wins, losses, player score, and game score
 function update()
 {
-	$('#player-score').text("Your score: " + playerScore);
-	$('#game-score').text("Game score: " + gameScore);
-}
-//updates text when player wins
-function updateWin()
-{
 	$('#wins').text("Wins: " + wins);
-	$('#player-score').text("Your score: " + playerScore);
-	$('#game-score').text("Game score: " + gameScore);
-}
-//updates text when player loses
-function updateLoss()
-{
 	$('#losses').text("Losses: " + losses);
 	$('#player-score').text("Your score: " + playerScore);
 	$('#game-score').text("Game score: " + gameScore);
 }
 
-//sets initial values for the crystals and game score
+//sets initial values for the crystals, game score, and other stats
 g_score();
 crystalValue();
-
-//displays the initial game stats
-updateWin();
-updateLoss();
+update();
 
 //adds to user score when the diamond is clicked on
 $("#diamond").on("click", function() 
@@ -85,7 +70,7 @@ if(playerScore === gameScore)
 	wins++;
 	reset();
 	g_score();
-	updateWin();
+	update();
 	crystalValue();
 }	
 //if the player loses, adds 1 to loss counter and resets stats
@@ -94,7 +79,7 @@ else if(playerScore > gameScore)
 	losses++;
 	reset();
 	g_score();
-	updateLoss();
+	update();
 	crystalValue();
 }
 });	
@@ -110,7 +95,7 @@ if(playerScore === gameScore)
 	wins++;
 	reset();
 	g_score();
-	updateWin();
+	update();
 	crystalValue();
 }
 //if the player loses, adds 1 to loss counter and resets stats
@@ -119,7 +104,7 @@ else if(playerScore > gameScore)
 	losses++;
 	reset();
 	g_score();
-	updateLoss();
+	update();
 	crystalValue();
 
 }
@@ -136,7 +121,7 @@ if(playerScore === gameScore)
 	wins++;
 	reset();
 	g_score();
-	updateWin();
+	update();
 	crystalValue();
 }
 //if the player loses, adds 1 to loss counter and resets stats
@@ -145,7 +130,7 @@ else if(playerScore > gameScore)
 	losses++;
 	reset();
 	g_score();
-	updateLoss();
+	update();
 	crystalValue();
 }
 });	
@@ -161,7 +146,7 @@ if(playerScore === gameScore)
 	wins++;
 	reset();
 	g_score();
-	updateWin();
+	update();
 	crystalValue();
 }
 //if the player loses, adds 1 to loss counter and resets stats
@@ -170,7 +155,7 @@ else if(playerScore > gameScore)
 	losses++;
 	reset();
 	g_score();
-	updateLoss();
+	update();
 	crystalValue();
 }
 });	
